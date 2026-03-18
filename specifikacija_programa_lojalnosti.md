@@ -162,4 +162,4 @@ Omogoča:
 
 ## 6. Diagram primera stanj
 
-![Diagram primerov uporabe](./usecase_diagram.png)
+![Diagram primerov uporabe](./use_diagram.png)
