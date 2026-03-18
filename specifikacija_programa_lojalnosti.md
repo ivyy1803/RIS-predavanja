@@ -159,3 +159,7 @@ Omogoča:
 6. Portal – spletna aplikacija za uporabnike
 7. Statusni prehod – pravila za napredovanje ali nazadovanje
 
+
+## 6. Diagram primera stanj
+
+![Diagram primerov uporabe](./usecase_diagram.png)
