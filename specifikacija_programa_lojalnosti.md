@@ -162,4 +162,43 @@ Omogoča:
 
 ## 6. Diagram primera stanj
 
-![Diagram primerov uporabe](./use_diagram.png)
+![Diagram primerov uporabe](./use_diagram.jpeg)
+
+
+
+## 7. Funkcionalna dekompozicija
+
+    Program lojalnosti Maestro
+    │
+    ├── Upravljanje uporabnikov
+    │   ├── Registracija
+    │   ├── Avtentikacija
+    │   ├── Urejanje podatkov
+    │
+    ├── Upravljanje lojalnosti
+    │   ├── Izračun točk
+    │   ├── Dodeljevanje statusov
+    │   ├── Preverjanje pogojev
+    │
+    ├── Upravljanje nagrad
+    │   ├── Dodajanje nagrad
+    │   ├── Urejanje nagrad
+    │   ├── Unovčevanje točk
+    │
+    ├── Spletni portal
+    │   ├── Prikaz točk
+    │   ├── Zgodovina nakupov
+    │   ├── Obvestila
+    │
+    ├── Administrativni portal
+    │   ├── Statistika
+    │   ├── Poročila
+    │   ├── SQL poizvedbe
+    │
+    ├── Integracija
+    │   ├── Sinhronizacija nakupov
+    │   ├── Validacija podatkov
+    │
+    └── Podporni sistemi
+        ├── E-pošta
+        ├── Tisk kartic
