@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Panel</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma;
+    background: linear-gradient(135deg, #e8e9eb, #fff);
+    margin: 0;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #006032;
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* TABS */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    margin: 5px;
+    background: #006032;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+.tab:hover {
+    background: #006032;
+}
+
+/* CONTENT */
+.container {
+    padding: 30px;
+}
+
+.section {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #006032;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #e8e9eb;
+}
+
+/* BUTTON */
+button {
+    padding: 5px 10px;
+    background: #b9bbb6;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div>Admin panel</div>
+    <div>
+        <a href="autentikacija.html">Odjava</a>
+    </div>
+</div>
+
+<!-- TABS -->
+<div class="tabs">
+    <div class="tab" onclick="showTab('users')">Uporabniki</div>
+    <div class="tab" onclick="showTab('rewards')">Nagrade</div>
+    <div class="tab" onclick="showTab('stats')">Statistika</div>
+    <div class="tab" onclick="showTab('reports')">Poročila</div>
+</div>
+
+<div class="container">
+
+    <!-- UPORABNIKI -->
+    <div id="users" class="section active">
+        <h2>Uporabniki</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Ime</th>
+                <th>E-pošta</th>
+                <th>Akcija</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Marko</td>
+                <td>marko@email.com</td>
+                <td><button>Izbriši</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- NAGRADE -->
+    <div id="rewards" class="section">
+        <h2>Nagrade</h2>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Naziv</th>
+                <th>Točke</th>
+                <th>Akcija</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Kava</td>
+                <td>300</td>
+                <td><button>Izbriši</button></td>
+            </tr>
+        </table>
+
+        <br>
+
+        <button onclick="toggleForm()">Dodaj nagrado</button>
+
+        <!-- FORM -->
+        <div id="rewardForm" style="display:none; margin-top:20px; background:white; padding:20px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+            
+            <h3>Nova nagrada</h3>
+
+            <input type="text" id="naziv" placeholder="Naziv nagrade" style="width:100%; padding:8px; margin:5px 0;"><br>
+            
+            <input type="number" id="bodovi" placeholder="Potrebne točke" style="width:100%; padding:8px; margin:5px 0;"><br>
+            
+            <textarea id="opis" placeholder="Opis nagrade" style="width:100%; padding:8px; margin:5px 0;"></textarea><br>
+
+            <button onclick="dodajNagradu()">Shrani</button>
+        </div>
+    </div>
+
+    <!-- STATISTIKA -->
+    <div id="stats" class="section">
+        <h2>Statistika</h2>
+        <p>Skupno uporabnikov: 120</p>
+        <p>Skupno točk: 50 000</p>
+    </div>
+
+    <!-- POROČILA -->
+    <div id="reports" class="section">
+        <h2>Poročila</h2>
+        <button>Prenesi poročilo</button>
+    </div>
+
+</div>
+
+<script>
+function showTab(tabId) {
+    let sections = document.querySelectorAll(".section");
+    sections.forEach(sec => sec.classList.remove("active"));
+
+    document.getElementById(tabId).classList.add("active");
+}
+
+function toggleForm() {
+    let form = document.getElementById("rewardForm");
+    form.style.display = form.style.display === "none" ? "block" : "none";
+}
+
+function dodajNagradu() {
+    let naziv = document.getElementById("naziv").value;
+    let bodovi = document.getElementById("bodovi").value;
+
+    if(naziv === "" || bodovi === "") {
+        alert("Izpolni vsa polja!");
+        return;
+    }
+
+    alert("Nagrada dodana (demo)");
+
+    // reset forme
+    document.getElementById("naziv").value = "";
+    document.getElementById("bodovi").value = "";
+    document.getElementById("opis").value = "";
+
+    toggleForm();
+}
+</script>
+</body>
+</html>

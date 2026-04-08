@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nagrade</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma;
+    background: linear-gradient(135deg, #e8e9eb, #FFF);
+    margin: 0;
+}
+
+.navbar {
+    background: #006032;
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.container {
+    padding: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+    color: #000;
+}
+
+button {
+    padding: 10px 15px;
+    background: #006032;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div>Maestro</div>
+    <div>
+        <a href="dashboard.html">Nadzorna plošča</a>
+        <a href="profil.html">Profil</a>
+        <a href="nagrade.html">Nagrade</a>
+        <a href="transakcije.html">Transakcije</a>
+        <a href="autentikacija.html">Odjava</a>
+    </div>
+</div>
+
+<div class="container">
+
+    <h2>Razpoložljive nagrade</h2>
+
+    <div class="card">
+        <div>
+            <strong>Popust 10%</strong><br>
+            500 točk
+        </div>
+        <button onclick="alert('Nagrada izkoriščena!')">Izkoristi</button>
+    </div>
+
+    <div class="card">
+        <div>
+            <strong>Brezplačna kava</strong><br>
+            300 točk
+        </div>
+        <button onclick="alert('Nagrada izkoriščena!')">Izkoristi</button>
+    </div>
+
+    <div class="card">
+        <div>
+            <strong>Darilna kartica 20€</strong><br>
+            1500 točk
+        </div>
+        <button onclick="alert('Nagrada izkoriščena!')">Izkoristi</button>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma;
+    background: linear-gradient(135deg, #e8e9eb, #FFF);
+    margin: 0;
+}
+
+.navbar {
+    background: #006032;
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.container {
+    padding: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #000;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div>Maestro</div>
+    <div>
+        <a href="dashboard.html">Nadzorna plošča</a>
+        <a href="profil.html">Profil</a>
+        <a href="nagrade.html">Nagrade</a>
+        <a href="transakcije.html">Transakcije</a>
+        <a href="autentikacija.html">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Moji bodovi</h2>
+        <p><strong>1200 bodova</strong></p>
+    </div>
+
+    <div class="card">
+        <h2>Status</h2>
+        <p>Silver</p>
+    </div>
+
+    <div class="card">
+        <h2>Zadnja transakcija</h2>
+        <p>25.03.2026 - 50€ - +100 bodova</p>
+    </div>
+
+</div>
+
+</body>
+</html>

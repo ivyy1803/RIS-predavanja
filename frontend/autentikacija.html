@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Maestro Autentikacija</title>
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+        background: linear-gradient(135deg, #e8e9eb, #fff);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .container {
+        background: white;
+        padding: 30px;
+        width: 320px;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #000;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 6px;
+        border: 1px solid #ddd;
+        transition: 0.2s;
+    }
+
+    input:focus {
+        border-color: #acada8;
+        outline: none;
+        box-shadow: 0 0 5px #ddd(200,162,255,0.5);
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background: #006032;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.2s;
+    }
+
+    button:hover {
+        transform: scale(1.03);
+        opacity: 0.9;
+    }
+
+    .toggle {
+        text-align: center;
+        margin-top: 15px;
+        color: #006032;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .toggle:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LOGIN -->
+    <div id="loginForm">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Korisničko ime">
+        <input type="password" id="password" placeholder="Lozinka">
+        <button id="loginBtn">Prijava</button>
+        <div class="toggle" onclick="toggleForm()">Nemaš nalog? Registruj se</div>
+    </div>
+
+    <script>
+    function toggleForm() {
+        let login = document.getElementById("loginForm");
+        let register = document.getElementById("registerForm");
+
+        if (login.style.display === "none") {
+            login.style.display = "block";
+            register.style.display = "none";
+        } else {
+            login.style.display = "none";
+            register.style.display = "block";
+        }
+    }
+
+    // Simulacija login-a
+    document.getElementById('loginBtn').onclick = function() {
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value.trim();
+
+        if(username === "admin" && password === "admin123") {
+            // Admin profil
+            window.location.href = "admin.html";
+        } 
+        else if(username === "user" && password === "user123") {
+            // Obični korisnik
+            window.location.href = "dashboard.html";
+        } 
+        else {
+            alert("Pogrešno korisničko ime ili lozinka!");
+        }
+    };
+    </script>
+
+    <!-- REGISTER -->
+    <div id="registerForm" style="display:none;">
+        <h2>Registracija</h2>
+        <input type="text" placeholder="Ime">
+        <input type="text" placeholder="Prezime">
+        <input type="email" placeholder="E-pošta">
+        <input type="password" placeholder="Lozinka">
+        <button onclick="location.href='dashboard.html'">Registracija</button>
+        <div class="toggle" onclick="toggleForm()">Već imaš nalog? Prijavi se</div>
+    </div>
+
+</div>
+
+<script>
+function toggleForm() {
+    let login = document.getElementById("loginForm");
+    let register = document.getElementById("registerForm");
+
+    if (login.style.display === "none") {
+        login.style.display = "block";
+        register.style.display = "none";
+    } else {
+        login.style.display = "none";
+        register.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Transakcije</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma;
+    background: linear-gradient(135deg, #e8e9eb, #FFF);
+    margin: 0;
+}
+
+.navbar {
+    background: #006032;
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.container {
+    padding: 30px;
+}
+
+h2 {
+    color: #000;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #006032;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #e8e9eb;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div>Maestro</div>
+    <div>
+        <a href="dashboard.html">Nadzorna plošča</a>
+        <a href="profil.html">Profil</a>
+        <a href="nagrade.html">Nagrade</a>
+        <a href="transakcije.html">Transakcije</a>
+        <a href="autentikacija.html">Odjava</a>
+    </div>
+</div>
+
+<div class="container">
+
+    <h2>Zgodovina transakcij</h2>
+
+    <table>
+        <tr>
+            <th>Datum</th>
+            <th>Znesek (€)</th>
+            <th>Točke</th>
+        </tr>
+        <tr>
+            <td>25.03.2026</td>
+            <td>50</td>
+            <td>+100</td>
+        </tr>
+        <tr>
+            <td>20.03.2026</td>
+            <td>30</td>
+            <td>+60</td>
+        </tr>
+        <tr>
+            <td>15.03.2026</td>
+            <td>80</td>
+            <td>+160</td>
+        </tr>
+    </table>
+
+</div>
+
+
+</body>
+</html>

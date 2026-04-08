@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Profil</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma;
+    background: linear-gradient(135deg, #e8e9eb, #FFF);
+    margin: 0;
+}
+
+.navbar {
+    background: #006032;
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.container {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #000;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #006032;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div>Maestro</div>
+    <div>
+        <a href="dashboard.html">Nadzorna plošča</a>
+        <a href="profil.html">Profil</a>
+        <a href="nagrade.html">Nagrade</a>
+        <a href="transakcije.html">Transakcije</a>
+        <a href="autentikacija.html">Logout</a>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="form-box">
+        <h2>Moj profil</h2>
+        <input type="text" placeholder="Ime">
+        <input type="text" placeholder="Priimek">
+        <input type="email" placeholder="E-pošta">
+        <button>Shrani</button>
+    </div>
+</div>
+
+</body>
+</html>
