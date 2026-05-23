@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <title>Maestro Prijava</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body class="auth-body">
+
+<div class="auth-page">
+
+    <div class="auth-brand">
+        <img src="assets/logo.png" alt="Maestro logo" class="auth-logo">
+
+        <div class="auth-brand-text">
+            <span>Program lojalnosti</span>
+            <h1>MAESTRO</h1>
+        </div>
+
+        <p>
+            Dostopaj do svojih točk zvestobe, nagrad in mesečnih
+            obračunov na enem mestu.
+        </p>
+    </div>
+
+    <div class="auth-card">
+
+        <div id="loginForm">
+            <p class="auth-label">Dobrodošel/a nazaj</p>
+            <h2>Prijava</h2>
+
+            <label>Uporabniško ime</label>
+            <input type="text" id="username" placeholder="Vnesi uporabniško ime">
+
+            <label>Geslo</label>
+            <input type="password" id="password" placeholder="Vnesi geslo">
+
+            <button id="loginBtn">Prijava</button>
+
+            <div class="toggle" onclick="toggleForm()">
+                Nimaš računa? Registriraj se
+            </div>
+        </div>
+
+        <div id="registerForm" style="display:none;">
+            <p class="auth-label">Nov član programa</p>
+            <h2>Registracija</h2>
+
+            <div class="form-grid-auth">
+                <div>
+                    <label>Ime</label>
+                    <input type="text" id="regName" placeholder="Ime">
+                </div>
+
+                <div>
+                    <label>Priimek</label>
+                    <input type="text" id="regSurname" placeholder="Priimek">
+                </div>
+            </div>
+
+            <label>E-pošta</label>
+            <input type="email" id="regEmail" placeholder="E-pošta">
+
+            <label>Uporabniško ime</label>
+            <input type="text" id="regUsername" placeholder="Uporabniško ime">
+
+            <label>Geslo</label>
+            <input type="password" id="regPassword" placeholder="Geslo">
+
+            <button id="registerBtn">Registracija</button>
+
+            <div class="toggle" onclick="toggleForm()">
+                Že imaš račun? Prijavi se
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

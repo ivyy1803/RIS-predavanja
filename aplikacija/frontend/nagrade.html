@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <title>Nagrade</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nagrade.css">
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="logo-box">
+        <img src="assets/logo.png" alt="Maestro logo">
+        <div class="logo-text">
+            <span class="logo-small">Program lojalnosti</span>
+            <span class="logo-main">MAESTRO</span>
+        </div>
+    </div>
+
+    <div class="nav-links">
+        <a href="dashboard.html">Nadzorna plošča</a>
+        <a href="profil.html">Profil</a>
+        <a href="nagrade.html">Nagrade</a>
+        <a href="transakcije.html">Transakcije</a>
+        <a href="#" id="logoutBtn">Odjava</a>
+    </div>
+</div>
+
+<div class="rewards-page">
+
+    <section class="rewards-hero">
+        <div>
+            <p class="eyebrow">PROGRAM LOJALNOSTI</p>
+            <h1>Razpoložljive nagrade</h1>
+            <p>Izkoristi zbrane točke za popuste, kupone in posebne ugodnosti.</p>
+        </div>
+
+        <div class="points-box">
+            <span>Moje točke</span>
+            <strong id="userPoints">0</strong>
+        </div>
+    </section>
+
+    <section id="rewardsContainer" class="rewards-grid">
+        <p>Nalagam nagrade...</p>
+    </section>
+
+</div>
+
+<script src="js/authGuard.js"></script>
+<script src="js/nagrade.js"></script>
+</body>
+</html>

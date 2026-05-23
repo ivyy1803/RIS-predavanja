@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="logo-box">
+        <img src="assets/logo.png" alt="Maestro logo">
+        <div class="logo-text">
+            <span class="logo-small">Program lojalnosti</span>
+            <span class="logo-main">MAESTRO</span>
+        </div>
+    </div>
+
+    <div class="nav-links">
+        <a href="dashboard.html">Nadzorna plošča</a>
+        <a href="profil.html">Profil</a>
+        <a href="nagrade.html">Nagrade</a>
+        <a href="transakcije.html">Transakcije</a>
+        <a href="#" id="logoutBtn">Odjava</a>
+    </div>
+</div>
+
+<div class="dashboard-page">
+
+    <section class="hero-card">
+        <div>
+            <p class="eyebrow">Dobrodošel/a</p>
+            <h1 id="userName">-</h1>
+            <p class="hero-text">Preglej svoje točke, status in zadnjo aktivnost v programu lojalnosti Maestro.</p>
+        </div>
+
+        <div class="hero-badge">
+            <span>Status</span>
+            <strong id="userStatus">-</strong>
+        </div>
+    </section>
+
+    <section class="dashboard-grid">
+        <div class="summary-card points-card">
+            <span class="card-label">Moje točke</span>
+            <h2><span id="userPoints">0</span></h2>
+            <p>Razpoložljive točke za koriščenje nagrad.</p>
+        </div>
+
+        <div class="summary-card">
+            <span class="card-label">Zadnja transakcija</span>
+            <h2>Aktivnost</h2>
+            <p id="lastTransaction">Ni podatkov</p>
+        </div>
+
+        <div class="summary-card action-card">
+            <span class="card-label">Hitri dostop</span>
+            <h2>Nagrade</h2>
+            <p>Preveri, katere nagrade lahko izkoristiš.</p>
+            <a class="card-button" href="nagrade.html">Poglej nagrade</a>
+        </div>
+    </section>
+
+</div>
+
+<script src="js/authGuard.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

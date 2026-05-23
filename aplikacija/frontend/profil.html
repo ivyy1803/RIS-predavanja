@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profil.css">
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="logo-box">
+        <img src="assets/logo.png" alt="Maestro logo">
+        <div class="logo-text">
+            <span class="logo-small">Program lojalnosti</span>
+            <span class="logo-main">MAESTRO</span>
+        </div>
+    </div>
+
+    <div class="nav-links">
+        <a href="dashboard.html">Nadzorna plošča</a>
+        <a href="profil.html">Profil</a>
+        <a href="nagrade.html">Nagrade</a>
+        <a href="transakcije.html">Transakcije</a>
+        <a href="#" id="logoutBtn">Odjava</a>
+    </div>
+</div>
+
+<div class="profile-page">
+
+    <section class="profile-hero">
+        <div>
+            <p class="eyebrow">MOJ PROFIL</p>
+            <h1>Upravljanje osebnih podatkov</h1>
+            <p>Preglej in posodobi svoje podatke ter spremeni geslo za dostop do portala.</p>
+        </div>
+    </section>
+
+    <section class="profile-layout">
+
+        <aside class="profile-summary">
+            <div class="avatar-circle">
+                <span id="avatarInitials">--</span>
+            </div>
+
+            <h2 id="profileFullName">-</h2>
+            <p id="profileEmail">-</p>
+
+            <div class="summary-divider"></div>
+
+            <div class="summary-row">
+                <span>Status</span>
+                <strong id="profileStatus">-</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Točke</span>
+                <strong id="profilePoints">0</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Uporabniško ime</span>
+                <strong id="profileUsername">-</strong>
+            </div>
+        </aside>
+
+        <div class="profile-forms">
+
+            <div class="profile-card">
+                <h2>Osebni podatki</h2>
+
+                <div class="form-grid">
+                    <div>
+                        <label>Ime</label>
+                        <input type="text" id="name" placeholder="Ime">
+                    </div>
+
+                    <div>
+                        <label>Priimek</label>
+                        <input type="text" id="surname" placeholder="Priimek">
+                    </div>
+                </div>
+
+                <label>E-pošta</label>
+                <input type="email" id="email" placeholder="E-pošta">
+
+                <label>Uporabniško ime</label>
+                <input type="text" id="username" placeholder="Uporabniško ime" disabled>
+
+                <button id="saveBtn">Shrani spremembe</button>
+            </div>
+
+            <div class="profile-card">
+                <h2>Sprememba gesla</h2>
+
+                <label>Trenutno geslo</label>
+                <input type="password" id="currentPassword" placeholder="Trenutno geslo">
+
+                <div class="form-grid">
+                    <div>
+                        <label>Novo geslo</label>
+                        <input type="password" id="newPassword" placeholder="Novo geslo">
+                    </div>
+
+                    <div>
+                        <label>Ponovi novo geslo</label>
+                        <input type="password" id="confirmPassword" placeholder="Ponovi novo geslo">
+                    </div>
+                </div>
+
+                <button id="changePasswordBtn">Spremeni geslo</button>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="js/authGuard.js"></script>
+<script src="js/profil.js"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="logo-box">
+        <img src="assets/logo.png" alt="Maestro logo">
+        <div class="logo-text">
+            <span class="logo-small">Program lojalnosti</span>
+            <span class="logo-main">MAESTRO</span>
+        </div>
+    </div>
+
+    <div class="nav-links">
+        <a href="#" id="logoutBtn">Odjava</a>
+    </div>
+</div>
+
+<div class="admin-page">
+
+    <section class="admin-hero">
+        <div>
+            <p class="eyebrow">Administracija</p>
+            <h1>Admin panel</h1>
+            <p>Upravljanje uporabnikov, nagrad, transakcij, statistike in mesečnih obračunov.</p>
+        </div>
+
+        <div class="admin-badge">
+            <span>Vloga</span>
+            <strong>ADMIN</strong>
+        </div>
+    </section>
+
+    <div class="tabs">
+        <div class="tab" onclick="showTab('users')">Uporabniki</div>
+        <div class="tab" onclick="showTab('rewards')">Nagrade</div>
+        <div class="tab" onclick="showTab('transactions')">Transakcije</div>
+        <div class="tab" onclick="showTab('stats')">Statistika</div>
+        <div class="tab" onclick="showTab('reports')">Poročila</div>
+    </div>
+
+    <div class="admin-content">
+
+        <div id="users" class="section active">
+            <div class="section-card">
+                <div class="section-header">
+                    <div>
+                        <p class="section-label">Člani programa</p>
+                        <h2>Uporabniki</h2>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Ime</th>
+                                <th>Priimek</th>
+                                <th>E-pošta</th>
+                                <th>Vloga</th>
+                                <th>Točke</th>
+                                <th>Status</th>
+                                <th>Akcija</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersBody">
+                            <tr>
+                                <td colspan="8">Nalagam uporabnike...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="rewards" class="section">
+            <div class="section-card">
+                <div class="section-header">
+                    <div>
+                        <p class="section-label">Program nagrad</p>
+                        <h2>Nagrade</h2>
+                    </div>
+
+                    <button onclick="toggleForm()">Dodaj nagrado</button>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Naziv</th>
+                                <th>Opis</th>
+                                <th>Točke</th>
+                                <th>Akcija</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rewardsBody">
+                            <tr>
+                                <td colspan="5">Nalagam nagrade...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="rewardForm" class="form-card">
+                    <h3>Nova nagrada</h3>
+
+                    <label>Naziv nagrade</label>
+                    <input type="text" id="title" placeholder="Naziv nagrade">
+
+                    <label>Potrebne točke</label>
+                    <input type="number" id="pointsRequired" placeholder="Potrebne točke">
+
+                    <label>Opis nagrade</label>
+                    <textarea id="description" placeholder="Opis nagrade"></textarea>
+
+                    <button id="addRewardBtn">Shrani</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="transactions" class="section">
+            <div class="section-card">
+                <div class="section-header">
+                    <div>
+                        <p class="section-label">Nakupi</p>
+                        <h2>Dodaj transakcijo</h2>
+                    </div>
+                </div>
+
+                <div class="admin-form-grid">
+                    <div>
+                        <label>Uporabnik</label>
+                        <select id="transactionUser"></select>
+                    </div>
+
+                    <div>
+                        <label>Znesek (€)</label>
+                        <input type="number" id="transactionAmount" placeholder="Znesek">
+                    </div>
+
+                    <div>
+                        <label>Datum transakcije</label>
+                        <input type="datetime-local" id="transactionDate">
+                    </div>
+                </div>
+
+                <button id="addTransactionBtn">Dodaj transakcijo</button>
+
+                <p class="helper-text">
+                    Točke se ne dodajo takoj. Dodelijo se šele pri mesečnem obračunu.
+                </p>
+            </div>
+        </div>
+
+        <div id="stats" class="section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span>Skupno uporabnikov</span>
+                    <strong id="totalUsers">0</strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>Skupno točk</span>
+                    <strong id="totalPoints">0</strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>Aktivne nagrade</span>
+                    <strong id="totalRewards">0</strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>Skupno transakcij</span>
+                    <strong id="totalTransactions">0</strong>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="section-header">
+                    <div>
+                        <p class="section-label">Mesečni proces</p>
+                        <h2>Mesečni obračun točk</h2>
+                    </div>
+                </div>
+
+                <div class="admin-form-grid">
+                    <div>
+                        <label>Leto</label>
+                        <input type="number" id="processYear" placeholder="Leto" value="2026">
+                    </div>
+
+                    <div>
+                        <label>Mesec</label>
+                        <input type="number" id="processMonth" placeholder="Mesec" value="3">
+                    </div>
+                </div>
+
+                <button id="processMonthBtn">Obračunaj mesec</button>
+            </div>
+        </div>
+
+        <div id="reports" class="section">
+            <div class="section-card">
+                <div class="section-header">
+                    <div>
+                        <p class="section-label">Izvoz podatkov</p>
+                        <h2>Poročila</h2>
+                    </div>
+                </div>
+
+                <p class="helper-text">
+                    Prenesi osnovno poročilo o uporabnikih, točkah, nagradah in transakcijah.
+                </p>
+
+                <button onclick="downloadReport()">Prenesi poročilo</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/authGuard.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

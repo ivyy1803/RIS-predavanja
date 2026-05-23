@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <title>Transakcije</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/transakcije.css">
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="logo-box">
+        <img src="assets/logo.png" alt="Maestro logo">
+        <div class="logo-text">
+            <span class="logo-small">Program lojalnosti</span>
+            <span class="logo-main">MAESTRO</span>
+        </div>
+    </div>
+
+    <div class="nav-links">
+        <a href="dashboard.html">Nadzorna plošča</a>
+        <a href="profil.html">Profil</a>
+        <a href="nagrade.html">Nagrade</a>
+        <a href="transakcije.html">Transakcije</a>
+        <a href="#" id="logoutBtn">Odjava</a>
+    </div>
+</div>
+
+<div class="transactions-page">
+
+    <section class="transactions-hero">
+        <div>
+            <p class="eyebrow">PREGLED AKTIVNOSTI</p>
+            <h1>Transakcije in mesečni obračuni</h1>
+            <p>Preglej zgodovino nakupov, status obračuna in dodeljene točke po mesecih.</p>
+        </div>
+
+        <div class="transactions-badge">
+            <span>Status obračuna</span>
+            <strong>Mesečno</strong>
+        </div>
+    </section>
+
+    <section class="transactions-section">
+        <div class="section-header">
+            <div>
+                <p class="section-label">Nakupi</p>
+                <h2>Zgodovina transakcij</h2>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Datum</th>
+                        <th>Znesek (€)</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="transactionsBody">
+                    <tr>
+                        <td colspan="3">Nalagam podatke...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="transactions-section">
+        <div class="section-header">
+            <div>
+                <p class="section-label">Točke</p>
+                <h2>Mesečni obračuni</h2>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mesec</th>
+                        <th>Skupni znesek (€)</th>
+                        <th>Stari status</th>
+                        <th>Novi status</th>
+                        <th>Dodeljene točke</th>
+                    </tr>
+                </thead>
+                <tbody id="monthlyBody">
+                    <tr>
+                        <td colspan="5">Nalagam obračune...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</div>
+
+<script src="js/authGuard.js"></script>
+<script src="js/transakcije.js"></script>
+</body>
+</html>

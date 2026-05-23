@@ -1,0 +1,150 @@
+.transactions-page {
+    padding: 34px;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.transactions-hero {
+    background:
+        linear-gradient(135deg, rgba(7, 20, 47, 0.96), rgba(15, 35, 77, 0.94)),
+        radial-gradient(circle at top right, rgba(212, 166, 79, 0.35), transparent 35%);
+    color: white;
+    border-radius: 24px;
+    padding: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 14px 35px rgba(7, 20, 47, 0.22);
+    margin-bottom: 28px;
+}
+
+.transactions-hero h1 {
+    color: white;
+    margin: 0 0 10px 0;
+    font-size: 34px;
+}
+
+.transactions-hero p {
+    margin: 0;
+    color: #e8e8e8;
+}
+
+.transactions-badge {
+    background: white;
+    color: #07142f;
+    border-radius: 18px;
+    padding: 20px 26px;
+    min-width: 170px;
+    text-align: center;
+}
+
+.transactions-badge span {
+    display: block;
+    color: #6f6f6f;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.transactions-badge strong {
+    font-size: 24px;
+    color: #07142f;
+}
+
+.transactions-section {
+    background: white;
+    border: 1px solid #e4e1dc;
+    border-radius: 22px;
+    box-shadow: 0 8px 24px rgba(7, 20, 47, 0.10);
+    padding: 26px;
+    margin-bottom: 26px;
+}
+
+.eyebrow {
+    color: #e6c16d;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin: 0 0 8px 0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.section-header h2 {
+    margin: 4px 0 0 0;
+    color: #07142f;
+}
+
+.section-label {
+    margin: 0;
+    color: #d4a64f;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 16px;
+}
+
+table {
+    box-shadow: none;
+    border-radius: 16px;
+}
+
+th {
+    background: #07142f;
+}
+
+td {
+    font-size: 15px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.status-processed {
+    background: rgba(212, 166, 79, 0.20);
+    color: #07142f;
+}
+
+.status-pending {
+    background: #f1eee8;
+    color: #6f6f6f;
+}
+
+.status-text {
+    text-transform: capitalize;
+}
+
+.points-value {
+    font-weight: 800;
+    color: #d4a64f;
+}
+
+@media (max-width: 800px) {
+    .transactions-page {
+        padding: 22px;
+    }
+
+    .transactions-hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .transactions-section {
+        padding: 18px;
+    }
+}
